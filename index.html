@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+	<title>Olympic Weightlifting Calculator</title>
+    <meta charset="utf-8">
+    <meta name="description" content="An online calculator designed to calculate ideal olympic lifts.">
+	<meta name="keywords" content="olympic weightlifting, weightlifting calculator, olympic weightlifting calculator, fitness, calc, weightlifting">
+	<meta name="author" content="OlyLifts.co">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="img/manifest.json">
+	<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+<div class="wrapper">
+	<div class="bar"></div>
+	<div class="inner">
+
+		<header>
+			<h1>Olympic Weightlifting Calculator</h1>
+			<p>An online calculator designed to estimate ideal olympic lifts based on your 1RM olympic style high-bar back squat.</p>
+		</header>
+
+		<div class="bsq">
+			<label for="bsquat-input">Enter your 1RM High-Bar Back Squat:</label>
+			<div>
+				<input type="range" id="bsquat-range-input" min="20" max="260" value="60">
+				<div class="equals">
+					<div></div>
+					<div></div>
+				</div>
+				<input type="text" id="bsquat-input" value="60kg">
+			</div>
+			<input type="checkbox" id="compare-input">
+			<label for="compare-input">Click to compare results to your lifts</label>
+		</div>
+
+		<ul class="units">
+
+			<li>
+				<div>
+					<label value="87.5">Front Squat</label>
+					<div class="pri">
+						<div>
+							<span></span>
+							<span>72%</span>
+						</div>
+						<div>
+							<span>80kg</span>
+							<span>70%</span>
+						</div>
+						<input type="text" class="liftInput" id="frSq">
+					</div>
+				</div>
+				<div>
+					<label value="67.5">Overhead Squat</label>
+					<div class="pri">
+						<div>
+							<span></span>
+							<span>72%</span>
+						</div>
+						<div>
+							<span>80kg</span>
+							<span>70%</span>
+						</div>
+						<input type="text" class="liftInput" id="ohSq">
+					</div>
+				</div>
+				<div>
+					<label value="125">Deadlift</label>
+					<div class="pri">
+						<div>
+							<span></span>
+							<span>72%</span>
+						</div>
+						<div>
+							<span>80kg</span>
+							<span>70%</span>
+						</div>
+						<input type="text" class="liftInput" id="dead">
+					</div>
+				</div>
+			</li>
+			<li>
+				<div>
+					<label value="65">Snatch</label>
+					<div class="pri">
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<input type="text" class="liftInput" id="frSq">
+					</div>
+				</div>
+				<div>
+					<label value="55">Power Snatch</label>
+					<div class="pri">
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<input type="text" class="liftInput" id="ohSq">
+					</div>
+				</div>
+				<div>
+					<label value="90">Snatch Pull</label>
+					<div class="pri">
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<input type="text" class="liftInput" id="dead">
+					</div>
+				</div>
+			</li>
+			<li>
+				<div>
+					<label value="77.5">Clean</label>
+					<div class="pri">
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<input type="text" class="liftInput" id="frSq">
+					</div>
+				</div>
+				<div>
+					<label value="65">Power Clean</label>
+					<div class="pri">
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<input type="text" class="liftInput" id="ohSq">
+					</div>
+				</div>
+				<div>
+					<label value="100">Clean Pull</label>
+					<div class="pri">
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<div>
+							<span></span>
+							<span></span>
+						</div>
+						<input type="text" class="liftInput" id="dead">
+					</div>
+				</div>
+			</li>
+			
+		</ul>
+
+		<footer>
+			<p>* Given different levers, experience, and skill, a deviation of upto 15% on each lift can be expected. 
+			<br>** Sources: Greg Everett<sup><a href="http://www.catalystathletics.com/article/1786/The-Relation-of-Snatch-Clean-Jerk-and-Squat-Weights/" target="_blank">1</a></sup>, Bob Takano<sup><a href="http://breakingmuscle.com/fitness/why-you-need-to-know-your-squat-to-clean-and-jerk-ratio" target="_blank">1</a></sup><sup><a href="http://breakingmuscle.com/fitness/why-you-need-to-know-your-snatch-to-clean-and-jerk-ratio" target="_blank">2</a></sup>, Dresdin Archibald<sup><a href="http://breakingmuscle.com/fitness/what-your-deadlift-to-squat-ratio-can-tell-you-about-your-olympic-lifts" target="_blank">1</a></sup>, Will Fleming<sup><a href="http://wilfleming.com/squat-more-lift-more-olympic-lift-ratios/" target="_blank">1</a></sup>, First Pull<sup><a href="https://firstpull.net/2014/03/26/the-use-of-ratios-for-weakness-identification-and-programming/" target="_blank">1</a></sup>, Jason Leydon<sup><a href="http://fitnesspainfree.com/fpf-podcast-episode-32-performance-programming-and-injury-prevention-with-jason-leydon/" target="_blank">1</a></sup>.</p>
+		</footer>
+
+	</div>
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92788124-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
