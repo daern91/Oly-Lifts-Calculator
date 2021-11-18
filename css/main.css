@@ -293,14 +293,6 @@ header h1 {
   max-width: 618px;
   padding: 60px 10px; }
 
-.bar {
-  display: block;
-  width: 100%;
-  background-color: #58becd;
-  height: 20px; }
-  .bar:first-of-type {
-    height: 60px; }
-
 header {
   margin-bottom: 60px; }
 
